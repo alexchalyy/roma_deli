@@ -4,7 +4,7 @@
 
 This is a deli website.
 
-![home](ROMA_DELI/wwwroot/images/home.PNG)
+![home](wwwroot/images/home.PNG)
 
 When the user opens the page, home page is opened for Roma Deli. It has links to itself, menu, register, and log in pages.
 
