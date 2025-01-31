@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url('/images/background.jpg');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+.container {
+  background-color: transparent !important; /* Make the background transparent */
+  /*background-color: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent white background to the content */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.text-center {
+  background-color: transparent !important; /* Make the background transparent */
+  padding: 20px; /* Optional: Add padding for better spacing */
+  color: white !important;
+  font: white !important;
+  font-weight: bolder;
+  font-size: xx-large;
+  transform: translateY(-65%); /* Move the container up by 25% */
+}
+
+.white {
+  color: white !important; 
+}
+
+.log-in-button {
+  margin-top: 6rem;
+  transform: translateY(-60%); /* Move the container up by 25% */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Add a hover effect */
+}
+
+.card-img-top {
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the images cover the area */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
