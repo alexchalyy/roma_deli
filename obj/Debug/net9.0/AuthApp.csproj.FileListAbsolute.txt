@@ -441,3 +441,9 @@ C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\obj\Debug\net9.0\refint\A
 C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\obj\Debug\net9.0\AuthApp.pdb
 C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\obj\Debug\net9.0\AuthApp.genruntimeconfig.cache
 C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\obj\Debug\net9.0\ref\AuthApp.dll
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\web.config
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\appsettings.Development.json
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\appsettings.json
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\AuthApp.deps.json
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\AuthApp.runtimeconfig.json
+C:\Users\alexc\OneDrive\Desktop\Repositories\roma_deli\bin\Debug\net9.0\publish\AuthApp.staticwebassets.endpoints.json
