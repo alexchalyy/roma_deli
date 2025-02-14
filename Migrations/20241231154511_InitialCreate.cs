@@ -3,6 +3,32 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+/*
+
+The provided code is a C# class named InitialCreate that inherits from the Migration class. This class is part of an Entity Framework Core migration, which is used to create and manage the database schema for an ASP.NET Core application. The InitialCreate class defines the structure of several tables related to ASP.NET Core Identity, which is used for user authentication and authorization.
+
+The Up method is overridden to define the operations that should be applied to the database when the migration is executed. It begins by creating the AspNetRoles table, which stores information about user roles. This table includes columns for the role ID, name, normalized name, and concurrency stamp. The primary key for this table is the Id column.
+
+Next, the AspNetUsers table is created to store user information. This table includes columns for user-specific details such as FirstName, LastName, Address, UserName, Email, PasswordHash, SecurityStamp, PhoneNumber, and several others. The primary key for this table is the Id column.
+
+The AspNetRoleClaims table is then created to store claims associated with roles. This table includes columns for the claim ID, role ID, claim type, and claim value. The primary key for this table is the Id column, and a foreign key constraint is established with the AspNetRoles table.
+
+Following this, the AspNetUserClaims table is created to store claims associated with users. This table includes columns for the claim ID, user ID, claim type, and claim value. The primary key for this table is the Id column, and a foreign key constraint is established with the AspNetUsers table.
+
+The AspNetUserLogins table is created to store external login information for users. This table includes columns for the login provider, provider key, provider display name, and user ID. The primary key for this table is a composite key consisting of the LoginProvider and ProviderKey columns, and a foreign key constraint is established with the AspNetUsers table.
+
+The AspNetUserRoles table is created to store the relationships between users and roles. This table includes columns for the user ID and role ID. The primary key for this table is a composite key consisting of the UserId and RoleId columns, and foreign key constraints are established with both the AspNetUsers and AspNetRoles tables.
+
+The AspNetUserTokens table is created to store tokens associated with users. This table includes columns for the user ID, login provider, name, and value. The primary key for this table is a composite key consisting of the UserId, LoginProvider, and Name columns, and a foreign key constraint is established with the AspNetUsers table.
+
+Several indexes are created to improve the performance of queries on the AspNetRoles and AspNetUsers tables. These indexes include the RoleNameIndex on the NormalizedName column of the AspNetRoles table, the EmailIndex on the NormalizedEmail column of the AspNetUsers table, and the UserNameIndex on the NormalizedUserName column of the AspNetUsers table.
+
+The Down method is overridden to define the operations that should be applied to the database when the migration is rolled back. This method drops all the tables created in the Up method, effectively reversing the changes made by the migration.
+
+Written by Alex Chalyy on 2/14/2025.
+
+*/
+
 namespace AuthApp.Migrations
 {
     /// <inheritdoc />

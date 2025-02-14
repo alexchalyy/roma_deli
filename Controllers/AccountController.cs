@@ -4,6 +4,24 @@ using AuthApp.Models;
 using AuthApp.ViewModels;
 using System.Threading.Tasks;
 
+/*
+
+The provided code defines an AccountController class in an ASP.NET Core application, which is responsible for handling user account-related actions such as registration, login, and logout. This controller uses ASP.NET Core Identity to manage user authentication and authorization.
+
+The AccountController class has two private fields: _userManager and _signInManager. These fields are instances of UserManager<ApplicationUser> and SignInManager<ApplicationUser>, respectively. The UserManager is used to manage user accounts, while the SignInManager handles user sign-in operations. The constructor of the AccountController class takes these two dependencies as parameters and assigns them to the private fields.
+
+The Register action methods handle user registration. The [HttpGet] version of the Register method simply returns the registration view. The [HttpPost] version of the Register method takes a RegisterViewModel as a parameter, which contains the user input from the registration form. If the model state is valid, a new ApplicationUser object is created and populated with the data from the RegisterViewModel. The UserManager.CreateAsync method is then called to create the user in the database. If the user creation is successful, the user is signed in using the SignInManager.SignInAsync method, and the user is redirected to the home page. If there are any errors during user creation, they are added to the model state and displayed to the user.
+
+The Login action methods handle user login. The [HttpGet] version of the Login method returns the login view. The [HttpPost] version of the Login method takes a LoginViewModel as a parameter, which contains the user input from the login form. If the model state is valid, the SignInManager.PasswordSignInAsync method is called to sign in the user with the provided email and password. If the login is successful, the user is redirected to the home page. If the login fails, an error message is added to the model state and displayed to the user.
+
+The Logout action method handles user logout. It is decorated with the [HttpPost] attribute, indicating that it should be called via an HTTP POST request. The SignInManager.SignOutAsync method is called to sign out the user, and the user is redirected to the home page.
+
+Overall, the AccountController class provides essential functionality for managing user accounts in an ASP.NET Core application, including registration, login, and logout, using the ASP.NET Core Identity framework.
+
+Written by Alex Chalyy on 2/14/2025.
+
+*/
+
 namespace AuthApp.Controllers
 {
     public class AccountController : Controller

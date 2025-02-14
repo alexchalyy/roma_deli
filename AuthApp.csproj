@@ -1,3 +1,27 @@
+<!--
+
+The provided code is an excerpt from an ASP.NET Core project file (AuthApp.csproj). This file is used to define the project configuration, including the target framework, nullable reference types, implicit using directives, and package dependencies.
+
+The <Project Sdk="Microsoft.NET.Sdk.Web"> element specifies that the project uses the .NET SDK for web applications, which includes tools and libraries for building ASP.NET Core applications.
+
+Within the <PropertyGroup> element, several properties are defined:
+
+<TargetFramework>net9.0</TargetFramework> indicates that the project targets .NET 9.0, specifying the version of the .NET runtime and libraries that the application will use.
+<Nullable>enable</Nullable> enables nullable reference types, which helps to catch potential null reference errors at compile time.
+<ImplicitUsings>enable</ImplicitUsings> enables implicit using directives, which automatically includes commonly used namespaces without requiring explicit using statements in each file.
+The <ItemGroup> element contains a list of package references that the project depends on:
+
+The <ItemGroup> element contains a list of package references that the project depends on:
+
+<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.0" /> adds the ASP.NET Core Identity package with Entity Framework Core support, which is used for user authentication and authorization.
+<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" /> adds the Entity Framework Core SQL Server provider, enabling the application to interact with SQL Server databases.
+<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0"> adds the Entity Framework Core tools package, which provides command-line tools for managing the database schema and migrations. The <IncludeAssets> and <PrivateAssets> elements specify which assets are included and which are private to the project, respectively.
+Overall, this project file configures the essential properties and dependencies required for building and running an ASP.NET Core application with Entity Framework Core and Identity.
+
+Written by Alex Chalyy on 2/13/2025.
+
+-->
+
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>

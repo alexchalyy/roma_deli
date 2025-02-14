@@ -2,17 +2,30 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!-- 
+
+The provided code snippet is from a Razor view in an ASP.NET Core application, specifically the Index.cshtml file, which is typically used as the home page of the application.
+
+The @{ ViewData["Title"] = "Home Page"; } line sets the title of the page to "Home Page" by assigning a value to the ViewData["Title"] property. This property is often used to pass data from the controller to the view, and in this case, it is used to set the title that might be displayed in the browser's title bar or in the header of the page.
+
+The <div class="d-flex justify-content-center align-items-center vh-100"> element uses Bootstrap utility classes to create a flex container that centers its child elements both horizontally and vertically. The d-flex class makes the div a flex container, justify-content-center centers the child elements horizontally, align-items-center centers them vertically, and vh-100 sets the height of the container to 100% of the viewport height. This ensures that the content inside this div is perfectly centered on the page.
+
+Inside this flex container, there is another <div class="text-center"> element that centers its child elements horizontally. Within this div, there is an @if (!User.Identity.IsAuthenticated) block that checks if the user is not authenticated. If the user is not authenticated, the code inside the block is executed.
+
+The code inside the @if block creates a <div class="welcome-section"> element that contains an <h1 class="display-1">Welcome</h1> element. This displays a large "Welcome" message to users who are not authenticated, providing a friendly greeting to visitors who have not logged in.
+
+Overall, this code snippet sets up a responsive and centered layout for the home page, displaying a welcome message to unauthenticated users. It uses Bootstrap classes for styling and layout, and Razor syntax to conditionally render content based on the user's authentication status.
+
+Written by Alex Chalyy on 2/14/2025.
+
+-->
+
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="text-center">
         @if (!User.Identity.IsAuthenticated)    {
             <div class="welcome-section">
                 <h1 class="display-1">Welcome</h1>
             </div>
-            <!-- Add Register and Login Buttons -->
-            <!--<div class="mt-4">
-                <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Register</a>
-                <a class="btn btn-success" asp-controller="Account" asp-action="Login">Login</a>
-            </div>-->
         }
     </div>
 </div>

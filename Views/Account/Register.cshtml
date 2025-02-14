@@ -1,5 +1,17 @@
 @model AuthApp.ViewModels.RegisterViewModel
 
+<!--
+
+The provided code snippet is from a Razor view in an ASP.NET Core application, specifically a registration page (Register.cshtml). The line @model AuthApp.ViewModels.RegisterViewModel is a directive that specifies the type of the model that the view will use. In this case, the view is strongly typed to the RegisterViewModel class, which is located in the AuthApp.ViewModels namespace.
+
+By specifying the model type, the view gains access to the properties and methods defined in the RegisterViewModel class. This allows for strongly-typed data binding, meaning that the view can directly reference the properties of the RegisterViewModel to display and capture user input. This approach helps to ensure type safety and reduces the likelihood of runtime errors due to incorrect data types.
+
+Using a strongly-typed model in Razor views is a common practice in ASP.NET Core applications, as it promotes a clear separation of concerns and enhances the maintainability of the code. The RegisterViewModel likely contains properties such as FirstName, LastName, Email, Password, and other relevant fields required for user registration. These properties are then used within the view to create form elements, validate user input, and display validation messages.
+
+Written by Alex Chalyy on 2/14/2025.
+
+-->
+
 @{
     ViewData["Title"] = "Register";
 }
